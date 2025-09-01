@@ -69,9 +69,9 @@ class SignInButton extends StatelessWidget {
           elevation: elevation,
           key: const ValueKey('Google'),
           text: text ?? 'Sign in with Google',
-          textColor: textColor ?? button == Buttons.Google
+          textColor: textColor ?? (button == Buttons.Google
               ? const Color.fromRGBO(0, 0, 0, 0.54)
-              : const Color(0xFFFFFFFF),
+              : const Color(0xFFFFFFFF)),
           image: Container(
             margin: const EdgeInsets.fromLTRB(6.0, 0.0, 4.0, 0.0),
             child: ClipRRect(
@@ -149,7 +149,7 @@ class SignInButton extends StatelessWidget {
           key: const ValueKey('Apple'),
           mini: mini,
           text: text ?? 'Sign in with Apple',
-          textColor: textColor ?? button == Buttons.Apple ? Colors.black : Colors.white,
+          textColor: textColor ?? (button == Buttons.Apple ? Colors.black : Colors.white),
           icon: FontAwesomeIcons.apple,
           iconColor: button == Buttons.Apple ? Colors.black : Colors.white,
           backgroundColor: button == Buttons.Apple
